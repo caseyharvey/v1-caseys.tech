@@ -4,11 +4,7 @@ import './homePage.sass';
 
 class HomePage extends React.Component {
   render() {
-    return (
-      <div>
-        <div>HomePage</div>
-      </div>
-    );
+    return <div className='container'>HomePage</div>;
   }
 }
 export default HomePage;

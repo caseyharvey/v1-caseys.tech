@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import PrismSnippet from '../Prism/PrismSnippet';
+// import PrismSnippet from '../Prism/PrismSnippet';
 import Projects from '../Projects/Projects';
 import HomePage from '../HomePage/HomePage';
 import Contact from '../Contact/Contact';
@@ -14,10 +14,11 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <Header />
-        <PrismSnippet language='language-javascript' />
-        <Route path='/HomePage' exact component={HomePage} />
-        <Route path='/Projects' exact component={Projects} />
-        <Route path='/Contact' exact component={Contact} />
+        <div className='mainContainer'>
+          <Route path='/HomePage' exact component={HomePage} />
+          <Route path='/Projects' exact component={Projects} />
+          <Route path='/Contact' exact component={Contact} />
+        </div>
         <Footer />
       </BrowserRouter>
     );

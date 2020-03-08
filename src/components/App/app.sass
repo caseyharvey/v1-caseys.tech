@@ -1,0 +1,50 @@
+@use '../../SharedStyles/color.sass' as c
+@use '../../SharedStyles/space.sass' as s
+
+@mixin colors
+    background-color: c.$accent
+    a
+        color: c.$dark
+
+@mixin padding($p)
+    padding: $p
+    box-sizing: border-box
+
+@mixin flex ($fD, $jC, $aI)
+    display: flex
+    align-items: $aI
+    flex-direction: $fD
+    justify-content: $jC
+
+@mixin width($w: 100%, $mW: 100%)
+    width: $w
+    max-width: $mW
+
+.combo
+    @include colors
+    @include flex(row, center, flex-start)
+
+.navContainer
+    @include padding(15px)
+    @include width(90%, s.$maxWidth)
+    @include flex(row, space-between, flex-start)
+
+.rightSide
+    @include width(135px)
+    @include flex(row, space-between, flex-start)
+
+.header
+    @extend .combo
+    @include padding(0)
+
+.mainContainer
+    margin: 0 auto
+    background-color: c.$dark
+    @include padding(15px)
+    @include flex(column, flex-start, center)
+    @include width(100% , s.$maxWidth)
+
+.footer
+    font-size: .9em
+    @extend .combo
+    @include padding(0)
