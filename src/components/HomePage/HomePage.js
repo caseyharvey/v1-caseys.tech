@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './homePage.scss';
+import './homePage.sass';
 
 class HomePage extends React.Component {
   render() {
