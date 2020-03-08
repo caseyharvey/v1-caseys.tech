@@ -1,50 +1,32 @@
-@use '../../SharedStyles/color.sass' as c
-@use '../../SharedStyles/space.sass' as s
+@use '../../sass-modules/_variables.sass' as v
+@use '../../sass-modules/_utilities.sass' as u
 
-@mixin colors
-    background-color: c.$accent
+.nav
+    background-color: v.$accent
     a
-        color: c.$dark
-
-@mixin padding($p)
-    padding: $p
-    box-sizing: border-box
-
-@mixin flex ($fD, $jC, $aI)
-    display: flex
-    align-items: $aI
-    flex-direction: $fD
-    justify-content: $jC
-
-@mixin width($w: 100%, $mW: 100%)
-    width: $w
-    max-width: $mW
-
-.combo
-    @include colors
-    @include flex(row, center, flex-start)
-
-.navContainer
-    @include padding(15px)
-    @include width(90%, s.$maxWidth)
-    @include flex(row, space-between, flex-start)
-
-.rightSide
-    @include width(135px)
-    @include flex(row, space-between, flex-start)
+        color: v.$dark
+    @include u.padding(0)
+    @include u.flex(row, center, flex-start)
 
 .header
-    @extend .combo
-    @include padding(0)
-
-.mainContainer
-    margin: 0 auto
-    background-color: c.$dark
-    @include padding(15px)
-    @include flex(column, flex-start, center)
-    @include width(100% , s.$maxWidth)
+    @extend .nav
 
 .footer
     font-size: .9em
-    @extend .combo
-    @include padding(0)
+    @extend .nav
+
+.nav-container
+    @include u.padding(15px)
+    @include u.width(90%, u.$max-width)
+    @include u.flex(row, space-between, flex-start)
+
+.right-side
+    @include u.width(135px)
+    @include u.flex(row, space-between, flex-start)
+
+.main-container
+    margin: 0 auto
+    background-color: v.$dark
+    @include u.padding(15px)
+    @include u.flex(column, flex-start, center)
+    @include u.width(100% , u.$max-width)

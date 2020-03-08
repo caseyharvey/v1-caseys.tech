@@ -1,14 +1,13 @@
-@use 'SharedStyles/color.sass' as c
-@use 'SharedStyles/font.sass' as f
+@use 'sass-modules/_variables.sass' as v
 
 @import url('https://fonts.googleapis.com/css?family=Bellota+Text&display=swap')
 
 html body
   margin: 0
-  color: c.$light
-  font-family: f.$mainFont
-  background-color: c.$shade
+  color: v.$light
+  font-family: v.$main-font
+  background-color: v.$shade
 
   a
     text-decoration: none
-    color: c.$light
+    color: v.$light

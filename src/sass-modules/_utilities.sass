@@ -1,0 +1,15 @@
+$max-width: 600px
+
+@mixin padding($p)
+    padding: $p
+    box-sizing: border-box
+
+@mixin flex ($fd, $jc, $ai)
+    display: flex
+    align-items: $ai
+    flex-direction: $fd
+    justify-content: $jc
+
+@mixin width($w: 100%, $mw: 100%)
+    width: $w
+    max-width: $mw
