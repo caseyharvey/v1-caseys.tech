@@ -15,11 +15,11 @@
     position: fixed
     font-size: 1.1em
     font-weight: 700
-    box-shadow: 0 15px 12px 0 v.$dark
+    box-shadow: 0 5px 15px 0 v.$dark
     @extend %nav
 
 .nav-container
-    @include u.padding(15px)
+    @include u.padding(u.$p1)
     @include u.width(90%, u.$max-width)
     @include u.flex(row, space-between, flex-start)
 
