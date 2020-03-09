@@ -1,0 +1,31 @@
+@use '../../sass-modules/_variables.sass' as v
+@use '../../sass-modules/_utilities.sass' as u
+
+%nav
+    background-color: v.$accent
+    a
+        color: v.$dark
+    @include u.padding(0)
+    @include u.flex(row, center, flex-start)
+
+.navbar
+    top: 0
+    left: 0
+    right: 0
+    position: fixed
+    font-size: 1.1em
+    font-weight: 700
+    box-shadow: 0 15px 12px 0 v.$dark
+    @extend %nav
+
+.nav-container
+    @include u.padding(15px)
+    @include u.width(90%, u.$max-width)
+    @include u.flex(row, space-between, flex-start)
+
+.right-side
+    @include u.width(190px)
+    @include u.flex(row, space-between, flex-start)
+
+.footer
+    @extend %nav
