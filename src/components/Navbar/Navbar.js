@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import letterC from '../../assets/letterC.png';
 import './navbar.sass';
 
 const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='nav-container'>
-        <Link to='/HomePage'>me</Link>
+        <Link to='/HomePage'>
+          <img src={letterC} alt='the letter c' />
+        </Link>
         <div className='right-side'>
           <Link to='/Projects'>projects</Link>
           <Link to='/Contact'>contact</Link>

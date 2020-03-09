@@ -19,9 +19,14 @@
     @extend %nav
 
 .nav-container
+    position: relative
     @include u.padding(v.$p1)
     @include u.width(90%, v.$max-width)
     @include u.flex(row, space-between, flex-start)
+    img
+        top: 13px
+        height: 1.5em
+        position: absolute
 
 .right-side
     @include u.width(190px)
