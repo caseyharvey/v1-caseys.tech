@@ -2,12 +2,13 @@
 @use '../../sass-modules/_utilities.sass' as u
 
 .container
-    @include u.padding(u.$p1)
-    @include u.width(90%, u.$max-width)
+    @include u.padding(v.$p1)
+    @include u.width(90%, v.$max-width)
     @include u.flex(column, flex-start, flex-start)
 
 .avatar-container
-    margin-top: 20px
+    margin-top: v.$marginTop
+    font-weight: 700
     padding-bottom: 10px
     @include u.flex(column, flex-start, flex-start)
 
@@ -20,11 +21,12 @@
 
 .name
     font-size: 1.3em
-    font-weight: 700
 
-.about-flex-box
+.title
+    color: v.$accent
+
+.about-container
     width: 100%
-    padding-top: 10px
     border-top: 2px solid v.$shade
     @include u.flex(row, flex-end, flex-start)
 
