@@ -14,9 +14,9 @@ class HomePage extends React.Component {
         <div className='about-container'>
           <div className='about-me'>
             <p>
-              I really love developing software. The whole process is deeply
-              satisfying and never ending. There is always something new to
-              learn, some improvement to be made and something just out of
+              I love developing software and writing code. The whole process is
+              deeply satisfying and never ending. There is always something new
+              to learn, some improvement to be made and something just out of
               reach. I get rush from solving problems and leveling up my skills.
               This keeps me motivated and inspired to push through the
               inevitable challenges along the way.
