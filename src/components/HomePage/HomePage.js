@@ -1,4 +1,5 @@
 import React from 'react';
+import letterC from '../../assets/letterC.png';
 import './home-page.sass';
 
 class HomePage extends React.Component {
@@ -6,9 +7,7 @@ class HomePage extends React.Component {
     return (
       <div className='page-container'>
         <div className='avatar-container'>
-          <div className='avatar'>
-            <span>C</span>
-          </div>
+          <img className='avatar' src={letterC} alt='the letter c' />
           <div className='name'>Casey Harvey</div>
           <div className='title'>Software Developer</div>
         </div>
