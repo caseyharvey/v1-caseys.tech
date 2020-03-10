@@ -4,11 +4,7 @@ import './contact.sass';
 
 class Contact extends React.Component {
   render() {
-    return (
-      <div>
-        <div>Contact</div>
-      </div>
-    );
+    return <div className='page-container'>contact</div>;
   }
 }
 export default Contact;

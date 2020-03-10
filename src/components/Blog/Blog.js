@@ -4,11 +4,7 @@ import './blog.sass';
 
 class Blog extends React.Component {
   render() {
-    return (
-      <div>
-        <div>Blog</div>
-      </div>
-    );
+    return <div className='page-container'>blog</div>;
   }
 }
 export default Blog;
