@@ -2,7 +2,7 @@ export const projectArray = [
   {
     id: 1,
     name: 'Time is money',
-    type: 'React Redux',
+    type: 'react redux redux-form',
     url: 'https://timeismoney.caseyharvey.space/',
     github: 'https://github.com/caseyharvey/time-is-money/tree/master/src',
     about:
@@ -11,7 +11,7 @@ export const projectArray = [
   {
     id: 2,
     name: 'umbleJay',
-    type: 'React',
+    type: 'react react-hook-form',
     url: 'https://umblejay.caseyharvey.space/',
     github: 'https://github.com/caseyharvey/umbleJay/tree/master/src',
     about:

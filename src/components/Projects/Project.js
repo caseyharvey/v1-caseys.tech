@@ -4,7 +4,6 @@ const Project = props => {
   return (
     <>
       <div className='title-container'>
-        <div>{props.type}</div>
         <a
           target='_blank'
           rel='noopener noreferrer'
@@ -13,6 +12,7 @@ const Project = props => {
         >
           {props.name}
         </a>
+        <div className='type'>{props.type}</div>
       </div>
       <div className='info-container'>
         <div className='links-container'>

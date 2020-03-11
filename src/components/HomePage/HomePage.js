@@ -7,7 +7,7 @@ class HomePage extends React.Component {
       <div className='page-container'>
         <div className='avatar-container'>
           <div className='name'>Casey Harvey</div>
-          <div className='title'>Software Developer</div>
+          <div className='title'>software developer</div>
         </div>
         <div className='about-container'>
           <div className='about-me'>
