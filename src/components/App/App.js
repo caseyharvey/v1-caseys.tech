@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // import PrismSnippet from '../Prism/PrismSnippet';
-import Projects from '../Projects/Projects';
+import ProjectList from '../Projects/ProjectList';
 import HomePage from '../HomePage/HomePage';
 import Contact from '../Contact/Contact';
 import Navbar from '../Navbar/Navbar';
@@ -17,7 +17,7 @@ class App extends React.Component {
         <Navbar />
         <div className='main-container'>
           <Route path='/HomePage' exact component={HomePage} />
-          <Route path='/Projects' exact component={Projects} />
+          <Route path='/Projects' exact component={ProjectList} />
           <Route path='/Contact' exact component={Contact} />
           <Route path='/Blog' exact component={Blog} />
         </div>
