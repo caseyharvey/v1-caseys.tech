@@ -1,0 +1,51 @@
+@use '../../sass-modules/_variables.sass' as v
+@use '../../sass-modules/_utilities.sass' as u
+
+.head-container
+    width: 100%
+    margin-top: v.$marginTop
+    @include u.flex(column, flex-end, flex-start)
+
+    .title-container
+        font-weight: 700
+        padding-bottom: 1em
+        @include u.flex(column, flex-start, flex-start)
+
+        .project-name
+            font-size: 1.3em
+
+        .project-tag
+            color: v.$accent
+
+    .links-container
+        width: 200px
+        padding-bottom: 1em
+        @include u.flex(row, space-between, flex-end)
+
+        .link-img
+            width: 40px
+
+        .link-button
+            padding: 8px 16px
+            border-radius: 5px
+            background-color: v.$shade
+
+.info-container
+    width: 100%
+    border-top: 2px solid v.$shade
+    @include u.flex(row, flex-end, flex-start)
+
+@media screen and (min-width: 550px)
+
+    .head-container
+        @include u.flex(row, flex-end, flex-end)
+
+        .title-container
+            width: 35%
+            @include u.flex(column, flex-end, flex-end)
+
+        .links-container
+            margin: 0 auto
+
+    .info
+        width: 65%
