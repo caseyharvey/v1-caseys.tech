@@ -5,7 +5,14 @@ const Project = props => {
     <>
       <div className='title-container'>
         <div>{props.type}</div>
-        <div className='project-name'>{props.name}</div>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          className='project-name'
+          href={props.url}
+        >
+          {props.name}
+        </a>
       </div>
       <div className='info-container'>
         <div className='links-container'>
