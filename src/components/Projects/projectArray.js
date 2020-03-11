@@ -6,7 +6,7 @@ export const projectArray = [
     url: 'https://timeismoney.caseyharvey.space/',
     github: 'https://github.com/caseyharvey/time-is-money/tree/master/src',
     about:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in maiores veritatis? Nostrum sapiente doloribus minus nam rem architecto sunt velit quod. Modi minus corporis unde nulla nostrum ducimus id. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum voluptate pariatur, doloribus ad quam'
+      "I built this app as a way to keep track time while I study. We all know how precious time is but we don't always use it for things that matter. This app can help you clarify whats important in your life by giving it a dollar value."
   },
   {
     id: 2,
@@ -15,6 +15,6 @@ export const projectArray = [
     url: 'https://umblejay.caseyharvey.space/',
     github: 'https://github.com/caseyharvey/umbleJay/tree/master/src',
     about:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in maiores veritatis? Nostrum sapiente doloribus minus nam rem architecto sunt velit quod. Modi minus corporis unde nulla nostrum ducimus id. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum voluptate pariatur, doloribus ad quam'
+      'This is pig latin converter. After seeing many people attempt to program this idea without truly succeeding, I wrote an algorithm to handle the conversion properly. The first attempt was done a while ago and I have since refactored it and turned in into a react app.'
   }
 ];

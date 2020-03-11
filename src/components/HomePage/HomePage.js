@@ -20,13 +20,12 @@ class HomePage extends React.Component {
               inevitable challenges along the way.
             </p>
             <p>
-              Writing code and seeing it come to life is a extremely rewarding.
+              Writing code and seeing it come to life is extremely rewarding.
               The reward comes from the fact that doing it well is not easy. It
               takes time, dedication and passion. I am hooked on the process and
               not the end result. I focus on having solid habits that improve
               with every win and every loss. these habits ensure that I always
-              deliver my best. And that I'm willing to smash it all to pieces
-              and build it again.
+              deliver my best.
             </p>
             <p>
               Thanks to the internet and all the amazing people producing
