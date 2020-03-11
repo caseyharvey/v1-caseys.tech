@@ -2,15 +2,13 @@
 @use '../../sass-modules/_utilities.sass' as u
 
 .avatar-container
-    margin-top: v.$marginTop
     font-weight: 700
-    padding-bottom: 1em
+    padding-bottom: .5em
     @include u.flex(column, flex-start, flex-start)
 
 .avatar
-    width: 100px
-    height: 100px
-    margin-bottom: 1em
+    width: 80px
+    margin-bottom: .5em
     @include u.flex(column, center, center)
 
 .name
@@ -21,8 +19,13 @@
 
 .about-container
     width: 100%
-    border-top: 2px solid v.$shade
+    padding-top: 1em
+    border-top: v.$border-top
     @include u.flex(row, flex-end, flex-start)
+
+    .about-me
+        p
+            margin-top: 0
 
 @media screen and (min-width: 550px)
 

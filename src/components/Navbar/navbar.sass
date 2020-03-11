@@ -3,10 +3,13 @@
 
 %nav
     background-color: v.$accent
-    a
-        color: darken(v.$dark, 5% )
-    @include u.padding(0)
+    @include u.padding(0, 0)
     @include u.flex(row, center, flex-start)
+    a
+        color: v.$dark
+        &:hover
+            color: darken(v.$dark,15%)
+            transform: translateY(1.5px)
 
 .navbar
     top: 0
@@ -19,7 +22,7 @@
 
 .nav-container
     position: relative
-    @include u.padding(v.$p1)
+    @include u.padding(v.$p2, v.$p2)
     @include u.width(90%, v.$max-width)
     @include u.flex(row, space-between, flex-start)
 

@@ -2,13 +2,12 @@
 @use '../../sass-modules/_utilities.sass' as u
 
 .main-container
-    margin: 52px auto 0 auto
     background-color: v.$dark
+    margin: 57.19px auto 0 auto
     @include u.flex(column, flex-start, center)
     @include u.width(100%)
 
 .page-container
-    // background-color: v.$shade
-    @include u.padding(v.$p1)
+    @include u.padding(v.$p1, v.$p2)
     @include u.width(90%, v.$max-width)
     @include u.flex(column, flex-start, flex-start)
