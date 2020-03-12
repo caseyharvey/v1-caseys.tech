@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
+
 import './contact.sass';
 
 const Contact = () => {
@@ -31,8 +32,8 @@ const Contact = () => {
       .then(() => {
         handleServerResponse(true, 'Message received');
       })
-      .catch(r => {
-        console.log(r.response);
+      .catch(error => {
+        console.log(error.response);
         handleServerResponse(
           false,
           'Sorry, something went wrong. Please click on the email link at the top of the page to contact me'
