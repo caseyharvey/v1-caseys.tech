@@ -6,40 +6,76 @@
     @include u.flex(column, flex-start, flex-start)
 
     .contact-details
+        font-weight: 700
+        padding-bottom: .5em
         @include u.flex(column, flex-start, flex-start)
 
-    form
-        width: 100%
-        border-radius: 5px
-        @include u.flex(column, space-evenly, flex-start)
+        .my-name
+            font-size: 1.3em
 
-        input, textarea
-            width: 100%
-            border: none
-            outline: none
-            color: v.$dark
-            font-size: 1.1em
-            margin-bottom: 1em
-            font-family: v.$main-font
-            background-color: darken(v.$light, 10%)
-            @include u.padding(v.$p1, v.$p1)
+        .my-email
+            font-size: .9em
+            margin-top: .1em
+            color: v.$accent
 
-            &:focus
-                background-color: white
-
-        &::placeholder
-            color: v.$shade
-
-        .contact-name
-            border-radius: 5px 5px 0 0
-
-        .contact-message
-            resize: none
-
-        .submit
-            margin-bottom: 0
-            border-radius: 0 0 5px 5px
-            background-color: v.$accent
             &:hover
-                transform: scale(.995)
-                background-color: darken(v.$accent,3%)
+                transform: translateY(1px)
+
+    .form-container
+        width: 100%
+        padding-top: 1em
+        border-top: v.$border-top
+        @include u.flex(row, flex-end, flex-start)
+
+        form
+            width: 100%
+            border-radius: 5px
+            @include u.flex(column, space-evenly, flex-start)
+
+            input, textarea
+                width: 100%
+                border: none
+                outline: none
+                color: v.$dark
+                font-size: 1.1em
+                margin-bottom: v.$p1
+                border-radius: 5px
+                font-family: v.$main-font
+                background-color: darken(v.$light, 10%)
+                @include u.padding(v.$p1, v.$p1)
+
+                &:focus
+                    background-color: white
+
+                &::placeholder
+                    color: v.$shade
+
+            .contact-message
+                resize: none
+
+            .submit
+                margin-bottom: 0
+                background-color: v.$accent
+                &:hover
+                    transform: scale(.992)
+                    background-color: darken(v.$accent,3%)
+
+            .error
+                width: 100%
+                font-weight: 700
+                color: v.$warning
+                border-radius: 5px
+                margin: -12px 0 4px 0
+                @include u.padding(v.$p1/2, v.$p1)
+
+@media screen and ( min-width: v.$breakpoint )
+    .contact-container
+
+        .contact-details
+            width: 35%
+            @include u.flex(column, flex-start, flex-end)
+
+        .form-container
+            form
+                width: 65%
+                @include u.flex(column, flex-start, flex-end)
