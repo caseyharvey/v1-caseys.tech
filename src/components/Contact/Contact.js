@@ -1,11 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import './contact.sass';
 
 const Contact = () => {
-  const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => console.log(data);
-  console.log(errors);
+  const { register, handleSubmit, errors, reset } = useForm();
+
+  const [serverState, setServerState] = useState({
+    submitting: false,
+    status: null
+  });
+
+  const handleServerResponse = (success, message) => {
+    setServerState({
+      submitting: false,
+      status: { success, message }
+    });
+    if (success) {
+      reset();
+    }
+  };
+
+  const onSubmit = data => {
+    setServerState({ submitting: true });
+    axios({
+      method: 'POST',
+      url: 'https://formspree.io/xgezeega',
+      data
+    })
+      .then(() => {
+        handleServerResponse(true, 'Message received');
+      })
+      .catch(r => {
+        console.log(r.response);
+        handleServerResponse(
+          false,
+          'Sorry, something went wrong. Please click on the email link at the top of the page to contact me'
+        );
+      });
+  };
+
   return (
     <div className='page-container'>
       <div className='contact-container'>
@@ -64,7 +98,18 @@ const Contact = () => {
               <span className='error'> only 500 characters allowed</span>
             )}
 
-            <input className='submit' type='submit' />
+            <input
+              className='submit'
+              disabled={serverState.submitting}
+              type='submit'
+            />
+            {serverState.status && (
+              <span
+                className={!serverState.status.success ? 'error' : 'msg-sent'}
+              >
+                {serverState.status.message}
+              </span>
+            )}
           </form>
         </div>
       </div>

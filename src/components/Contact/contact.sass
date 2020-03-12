@@ -54,7 +54,6 @@
                 resize: none
 
             .submit
-                margin-bottom: 0
                 background-color: v.$accent
                 &:hover
                     transform: scale(.992)
@@ -64,8 +63,14 @@
                 width: 100%
                 font-weight: 700
                 color: v.$warning
-                border-radius: 5px
                 margin: -12px 0 4px 0
+                @include u.padding(v.$p1/2, v.$p1)
+
+            .msg-sent
+                width: 100%
+                font-weight: 700
+                color: v.$accent
+                text-align: center
                 @include u.padding(v.$p1/2, v.$p1)
 
 @media screen and ( min-width: v.$breakpoint )
