@@ -1,27 +1,22 @@
 @use '../../sass-modules/_variables.sass' as v
 @use '../../sass-modules/_utilities.sass' as u
 
-.avatar-container
+.title-container
     font-weight: 700
-    padding-bottom: .5em
+    padding-bottom: .5rem
     @include u.flex(column, flex-start, flex-start)
 
-.avatar
-    width: 80px
-    margin-bottom: .5em
-    @include u.flex(column, center, center)
+    .name
+        font-size: v.$heading
 
-.name
-    font-size: 1.3em
-
-.title
-    font-size: .9em
-    margin-top: .1em
-    color: v.$accent
+    .title
+        font-size: v.$sub-heading
+        margin-top: v.$sub-margin-top
+        color: v.$accent
 
 .about-container
     width: 100%
-    padding-top: 1em
+    padding-top: v.$body-padding-top
     border-top: v.$border-top
     @include u.flex(row, flex-end, flex-start)
 
@@ -31,7 +26,7 @@
 
 @media screen and (min-width: v.$breakpoint)
 
-    .avatar-container
+    .title-container
         width: 35%
         @include u.flex(column, center, flex-end)
 

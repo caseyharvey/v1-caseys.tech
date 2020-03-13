@@ -16,19 +16,22 @@
     left: 0
     right: 0
     position: fixed
-    font-size: 1.1em
+    font-size: 1rem
+    line-height: 1rem
     box-shadow: 0 5px 15px 0 v.$dark
     @extend %nav
 
-.nav-container
-    position: relative
-    @include u.padding(v.$p1, v.$p1)
-    @include u.width(90%, v.$max-width)
-    @include u.flex(row, space-between, flex-start)
+    .nav-container
+        position: relative
+        @include u.padding(v.$p1, v.$p1)
+        @include u.width(100%, v.$max-width)
+        @include u.flex(row, space-between, flex-start)
 
-.right-side
-    @include u.width(190px)
-    @include u.flex(row, space-between, flex-start)
+        .right-side
+            @include u.width(190px)
+            @include u.flex(row, space-between, flex-start)
 
-.footer
-    @extend %nav
+@media screen and ( min-width: 425px )
+    .navbar
+        .nav-container
+            @include u.width(90%, v.$max-width)

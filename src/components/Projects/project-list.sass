@@ -4,35 +4,35 @@
 .title-container
     width: 100%
     font-weight: 700
-    padding-bottom: .5em
+    padding-bottom: .5rem
     @include u.flex(column, flex-start, flex-start)
 
     .project-name
-        font-size: 1.3em
+        font-size: v.$heading
 
         &:hover
-            transform: translateY(1.5px)
+            transform: translateX(-1.5px)
 
     .type
-        font-size: .9em
-        margin-top: .1em
+        font-size: v.$sub-heading
+        margin-top: v.$sub-margin-top
         color: v.$accent
 
 .info-container
     width: 100%
     border-top: v.$border-top
-    @include u.padding(v.$p1, 0)
+    padding: v.$body-padding-top 0
     @include u.flex(column, flex-end, flex-start)
 
     .links-container
-        width: 258px
-        margin-bottom: 1em
+        width: 100%
+        margin-bottom: v.$body-padding-top
         @include u.flex(row, space-between, flex-end)
 
         .link-button
-            width: 121px
             text-align: center
             border-radius: 5px
+            width: calc( 50% - .5rem)
             background-color: v.$shade
             @include u.padding(v.$p1/2, v.$p1 )
 
@@ -50,7 +50,6 @@
         @include u.flex(column, flex-end, flex-end)
 
     .info-container
-        padding: 1em 0
         @include u.flex(row, flex-start, flex-start)
 
         .links-container
@@ -58,9 +57,10 @@
             @include u.flex(column, flex-end, flex-end)
 
             .link-button
-                margin-bottom: 1em
+                width: 75%
+                margin-bottom: 1rem
 
         .info
             width: 65%
             p
-                margin-left: 1em
+                margin-left: 1rem

@@ -5,7 +5,7 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className='page-container'>
-        <div className='avatar-container'>
+        <div className='title-container'>
           <div className='name'>Casey Harvey</div>
           <div className='title'>software developer</div>
         </div>
