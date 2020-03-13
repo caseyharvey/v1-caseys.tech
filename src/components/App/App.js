@@ -7,7 +7,6 @@ import HomePage from '../HomePage/HomePage';
 import Contact from '../Contact/Contact';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Navbar/Footer';
-import Blog from '../Blog/Blog';
 import './app.sass';
 
 class App extends React.Component {
@@ -19,7 +18,7 @@ class App extends React.Component {
           <Route path='/' exact component={HomePage} />
           <Route path='/Projects' exact component={ProjectList} />
           <Route path='/Contact' exact component={Contact} />
-          <Route path='/Blog' exact component={Blog} />
+          <Route path='/Blog' />
         </div>
         <Footer />
       </BrowserRouter>
