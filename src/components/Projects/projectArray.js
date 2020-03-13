@@ -6,7 +6,7 @@ export const projectArray = [
     url: 'https://timeismoney.caseyharvey.space/',
     github: 'https://github.com/caseyharvey/time-is-money/tree/master/src',
     about:
-      "I built this app as a way to keep track time while I study. We all know how precious time is but we don't always use it for things that matter. This app can help you clarify whats important in your life by giving it a dollar value."
+      "I built this app as a way to keep track of time while I study. We all know how precious time is but we don't always use it for things that matter. This app can help you clarify whats important in your life by giving it a dollar value."
   },
   {
     id: 2,
