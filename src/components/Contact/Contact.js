@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
@@ -6,6 +6,9 @@ import './contact.sass';
 
 const Contact = () => {
   const { register, handleSubmit, errors, reset } = useForm();
+
+  const [emailCopied, setEmailCopied] = useState(false);
+  const textAreaRef = useRef(null);
 
   const [serverState, setServerState] = useState({
     submitting: false,
@@ -41,14 +44,26 @@ const Contact = () => {
       });
   };
 
+  const copyEmailToClipboard = () => {
+    textAreaRef.current.select();
+    document.execCommand('copy');
+    setEmailCopied(true);
+  };
+
   return (
     <div className='page-container'>
       <div className='contact-container'>
         <div className='contact-details'>
           <div className='my-name'>Contact me</div>
-          <a href='mailto:contact@caseyharvey.space?' className='my-email'>
-            contact@caseyharvey.space
+          <a href='mailto:im@caseyharvey.space?' className='my-email'>
+            im@caseyharvey.space
           </a>
+          <span onClick={copyEmailToClipboard} className='copy'>
+            copy
+          </span>
+          <span className={emailCopied ? 'success' : 'hide success'}>
+            success!
+          </span>
         </div>
         <div className='form-container'>
           <form onSubmit={handleSubmit(onSubmit)}>
@@ -74,7 +89,7 @@ const Contact = () => {
               className='contact-email'
               ref={register({
                 required: true,
-                pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
+                pattern: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,20}$/
               })}
             />
             {errors.email && errors.email.type === 'required' && (
@@ -113,6 +128,12 @@ const Contact = () => {
             )}
           </form>
         </div>
+        <textarea
+          readOnly
+          ref={textAreaRef}
+          value='im@caseyharvey.space'
+          className='hide'
+        ></textarea>
       </div>
     </div>
   );
