@@ -39,7 +39,7 @@ const Contact = () => {
         console.log(error.response);
         handleServerResponse(
           false,
-          'Sorry, something went wrong. Please click on the email link at the top of the page to contact me'
+          'Sorry, something went wrong. Please click on the email link at the top of the page or copy my email to contact me'
         );
       });
   };
