@@ -54,9 +54,9 @@ const Contact = () => {
     <div className='page-container'>
       <div className='contact-container'>
         <div className='contact-details'>
-          <div className='my-name'>Contact me</div>
-          <a href='mailto:im@caseyharvey.space?' className='my-email'>
-            im@caseyharvey.space
+          <div className='my-name'>Contact</div>
+          <a href='mailto:im@caseys.tech?' className='my-email'>
+            im@caseys.tech
           </a>
           <span onClick={copyEmailToClipboard} className='copy'>
             copy
@@ -131,7 +131,7 @@ const Contact = () => {
         <textarea
           readOnly
           ref={textAreaRef}
-          value='im@caseyharvey.space'
+          value='im@caseys.tech'
           className='hide'
         ></textarea>
       </div>
