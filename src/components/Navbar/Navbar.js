@@ -10,7 +10,13 @@ const Navbar = () => {
         <div className='right-side'>
           <Link to='/Projects'>projects</Link>
           <Link to='/Contact'>contact</Link>
-          <Link to='/Blog'>blog</Link>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='https://blog.caseys.tech/'
+          >
+            blog
+          </a>
         </div>
       </div>
     </nav>
