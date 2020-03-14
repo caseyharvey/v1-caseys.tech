@@ -9,7 +9,7 @@
         opacity: 0
 
     .contact-details
-        font-weight: 700
+        z-index: 0
         position: relative
         padding-bottom: .5rem
         @include u.flex(column, flex-start, flex-start)
@@ -47,7 +47,10 @@
 
         form
             width: 100%
+            padding: .8rem
             border-radius: 5px
+            box-sizing: border-box
+            background-color: darken(v.$dark, 2%)
             @include u.flex(column, space-evenly, flex-start)
 
             input, textarea
@@ -60,7 +63,7 @@
                 border-radius: 5px
                 margin-bottom: v.$p1
                 font-family: v.$main-font
-                background-color: darken(v.$light, 10%)
+                background-color: v.$lighter
                 @include u.padding(v.$p1, v.$p1)
                 &:focus
                     background-color: white
@@ -75,18 +78,16 @@
                 background-color: v.$accent
                 &:hover
                     transform: scale(.992)
-                    background-color: darken(v.$accent,3%)
+                    background-color: darken(v.$accent,10%)
 
             .error
                 width: 100%
-                font-weight: 700
                 color: v.$warning
                 margin: -12px 0 4px 0
                 @include u.padding(v.$p1/2, v.$p1)
 
             .msg-sent
                 width: 100%
-                font-weight: 700
                 color: v.$accent
                 text-align: center
                 @include u.padding(v.$p1/2, v.$p1)

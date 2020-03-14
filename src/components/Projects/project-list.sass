@@ -3,7 +3,6 @@
 
 .title-container
     width: 100%
-    font-weight: 700
     padding-bottom: .5rem
     @include u.flex(column, flex-start, flex-start)
 
@@ -11,7 +10,7 @@
         font-size: v.$heading
 
         &:hover
-            transform: translateX(-1.5px)
+            transform: translateX(1.5px)
 
     .type
         font-size: v.$sub-heading
@@ -31,17 +30,27 @@
 
         .link-button
             text-align: center
-            border-radius: 5px
+            border-radius: .1rem
+            box-sizing: border-box
             width: calc( 50% - .5rem)
-            background-color: v.$shade
+            background-color: lighten(v.$dark,6% )
+            background: linear-gradient(0deg,lighten(v.$dark,3% ) 50%,lighten(v.$dark,6% )50%,lighten(v.$dark,6% )100%)
             @include u.padding(v.$p1/2, v.$p1 )
 
             &:hover
-                transform: scale(.99)
-                background-color: darken(v.$shade,3%)
+                // transform: scale(.99)
+                // background-color: darken(v.$dark,3%)
+                background: lighten(v.$dark,6% )
     .info
         p
             margin-top: 0
+            padding: .8rem
+            line-height: 1.3rem
+            background-color: darken(v.$dark, 2%)
+            border-right: .1rem solid lighten(v.$dark, 6%)
+            border-bottom: .5rem solid lighten(v.$dark, 6%)
+            border-top: .15rem solid darken(v.$dark, 6%)
+            border-left: .1rem solid darken(v.$dark, 6%)
 
 @media screen and (min-width: v.$breakpoint)
 

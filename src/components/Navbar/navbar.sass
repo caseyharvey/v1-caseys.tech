@@ -7,23 +7,27 @@
     @include u.flex(row, center, flex-start)
     a
         color: v.$dark
+        font-size: 1rem
+
         &:hover
-            color: darken(v.$dark,15%)
             transform: translateY(1.5px)
 
 .navbar
     top: 0
     left: 0
     right: 0
+    z-index: 1
     position: fixed
-    font-size: 1rem
+    max-height: 3rem
     line-height: 1rem
     box-shadow: 0 5px 15px 0 v.$dark
+    border-bottom: 1.4rem solid darken(v.$accent, 10%)
     @extend %nav
 
     .nav-container
         position: relative
         @include u.padding(v.$p1, v.$p1)
+
         @include u.width(100%, v.$max-width)
         @include u.flex(row, space-between, flex-start)
 
