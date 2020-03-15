@@ -60,10 +60,15 @@
                 color: v.$dark
                 appearance: none
                 font-size: 1.1rem
-                border-radius: 5px
+                // border-radius: 5px
                 margin-bottom: v.$p1
                 font-family: v.$main-font
                 background-color: v.$lighter
+                // background-color: lighten(v.$dark, 2%)
+                border-right: .1rem solid lighten(v.$dark, 6%)
+                border-bottom: .5rem solid lighten(v.$dark, 6%)
+                border-top: .15rem solid darken(v.$dark, 6%)
+                border-left: .1rem solid darken(v.$dark, 6%)
                 @include u.padding(v.$p1, v.$p1)
                 &:focus
                     background-color: white
@@ -74,6 +79,7 @@
                 resize: none
 
             .submit
+                border: none
                 cursor: pointer
                 background-color: v.$accent
                 &:hover
