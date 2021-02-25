@@ -29,11 +29,11 @@
         @include u.padding(v.$p1, v.$p1)
 
         @include u.width(100%, v.$max-width)
-        @include u.flex(row, space-between, flex-start)
+        @include u.flex(row, flex-end, flex-end)
 
         .right-side
-            @include u.width(190px)
-            @include u.flex(row, space-between, flex-start)
+            @include u.width(270px)
+            @include u.flex(row, space-between, flex-end)
 
 @media screen and ( min-width: 425px )
     .navbar
